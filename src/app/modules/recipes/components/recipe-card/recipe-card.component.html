@@ -1,0 +1,12 @@
+<div ngif="recipe" class="card" appHighlight>
+    <div class="info">
+        <div class="image">
+            <img [src]="recipe.image" alt="{{ recipe.name }}" />
+          </div>
+          <h3>{{ recipe.name }}</h3>
+          <p>{{ recipe.ingredients.join(', ') }}</p>
+    </div>
+    <button class="btn btn-success" *ngIf="!isSaved" (click)="saveRecipe()">Save</button>
+    <button class="btn btn-danger" *ngIf="isSaved" (click)="removeRecipe()">Remove</button>
+
+  </div>

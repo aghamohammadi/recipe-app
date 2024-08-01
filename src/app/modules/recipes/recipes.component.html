@@ -1,0 +1,15 @@
+
+
+<div class="status" *ngIf="isLoading">Loading recipes...</div>
+<div class="list-page px-3" *ngIf="!isLoading && !hasError">
+    <div class="search py-3">
+        <app-search-form (onSearch)="filterRecipes($event)"></app-search-form>
+    </div>
+    <div class="row" >
+        <div app-recipe-card class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4" *ngFor="let recipe of filteredRecipes">
+            <app-recipe-card [recipe]="recipe" ></app-recipe-card>
+          </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,92 @@
+body{
+    font-size: 16px;
+}
+
+ul,li{
+    list-style-type: none;
+}
+
+header{
+    background-color: #01418e;
+    color: white;
+    padding: 0 1rem;
+
+    
+    .nav-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        ul.nav{
+            position: fixed;
+            top: 52px;
+            right: 0;
+            left: 0;
+            height: fit-content;
+            z-index: 999;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+            li{
+                display: block;
+                width: 100%;
+                a,span{
+                    padding: 1rem;
+                    background-color: #6294d2;
+                    color: #fdfdfd;   
+                    display: block;
+                    text-align: center;
+                }
+                a{
+                    text-decoration: none;
+                    transition: 0.3s;
+                    &:hover,&.active{
+                        background-color: #4484d3;
+                    }
+                }
+                
+            }
+        }
+
+        @media (min-width: 992px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            ul.nav{
+                position: static;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: auto;
+                background-color: transparent;
+
+                li{
+                    display: block;
+                 width: auto;
+                    a,span{
+                        padding: 1rem;
+                        background-color: transparent;
+
+                    }
+                    a{
+                        text-decoration: none;
+                        transition: 0.3s;
+                        &:hover,&.active{
+                            background-color: #4484d3;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    
+        
+    }
+
+}
